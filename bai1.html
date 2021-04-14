@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lũy thừa</title>
+    <h1>Bình phương của 2 số</h1>
+</head>
+<input id="num1" type="number">
+<input id="num2" type="number">
+<button onclick="powNum1AndNum2()">Result</button>
+<p id="result"></p>
+
+<body>
+    <script>
+        function powNum1AndNum2() {
+            let n1 = getNum1();
+            let n2 = getNum2();
+            let value = Math.pow(n1, n2);
+            document.getElementById("result").innerText = value;
+        }
+
+        function getNum1() {
+            return document.getElementById("num1").value
+        }
+
+        function getNum2() {
+            return document.getElementById("num2").value
+        }
+    </script>
+</body>
+
+</html>
