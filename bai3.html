@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input id="num1" type="number">
+<button onclick="giaiThua()">Result</button>
+<p id="result"></p>
+
+<body>
+    <script>
+        function giaiThua() {
+            let number = getNum1();
+            let tich = 1;
+            if (number == 0) {
+                document.getElementById("result").innerText = 1;
+            } else {
+                for (let i = 1; i <= number; i++) {
+                    tich = tich * i;
+                }
+                document.getElementById("result").innerText = tich;
+            }
+        }
+        
+        function getNum1(){
+            return document.getElementById("num1").value
+        }
+    </script>
+</body>
+
+</html>
