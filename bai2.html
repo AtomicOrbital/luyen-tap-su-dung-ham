@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích chu vi hình tròn </title>
+    <h1>Tính diện tích và chu vi hình tròn </h1>
+</head>
+Diện Tích:<input id="num1" type="number">
+Chu vi:<input id="num2" type="number">
+<button onclick="calculateDientichHinhTron(), calculateChuViHinhTron()">Result</button>
+<p id="result"></p>
+<p id="result1"></p>
+
+<body>
+    <script>
+        let PI = 3.14;
+
+        function calculateDientichHinhTron() {
+            let n1 = getNum1();
+            let dienTich = dienTichHinhTron();
+            document.getElementById("result").innerText = "Diện tích là :" + dienTich;
+        }
+
+        function calculateChuViHinhTron() {
+            let n2 = getNum2();
+            let chuVi = chuViHinhTron();
+            document.getElementById("result1").innerText = "Chu Vi là:" + chuVi;
+        }
+        function dienTichHinhTron() {
+            return PI * getNum1() * getNum1();
+        }
+
+        function chuViHinhTron() {
+            return 2 * PI * getNum2();
+        }
+        function getNum1() {
+            return document.getElementById("num1").value
+        }
+
+        function getNum2() {
+            return document.getElementById("num2").value
+        }
+    </script>
+</body>
+
+</html>
